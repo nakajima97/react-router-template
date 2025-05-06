@@ -1,7 +1,7 @@
 on: [pull_request]
 
 jobs:
-  run-lint:
+  run-type-check:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -15,5 +15,5 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Run Lint
-        run: yarn lint
+      - name: Run type-check
+        run: yarn type-check

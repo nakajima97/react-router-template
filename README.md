@@ -1,87 +1,80 @@
-# Welcome to React Router!
+# React Router v7 テンプレート
 
-A modern, production-ready template for building full-stack React applications using React Router.
+このリポジトリは、React Router v7 を使ってアプリを開発する際のテンプレートです。
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 特徴
 
-## Features
+- 🚀 サーバーサイドレンダリング対応
+- ⚡️ ホットリロード（HMR）
+- 📦 アセットバンドル・最適化
+- 🔄 データローディング・ミューテーション
+- 🔒 TypeScript 対応
+- 🎉 TailwindCSS 標準搭載
+- 📖 [React Router ドキュメント](https://reactrouter.com/)
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## はじめかた
 
-## Getting Started
-
-### Installation
-
-Install the dependencies:
+### インストール
 
 ```bash
-npm install
+# 依存パッケージをインストール
+yarn install
 ```
 
-### Development
-
-Start the development server with HMR:
+### 開発サーバー起動
 
 ```bash
-npm run dev
+yarn dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+アプリは `http://localhost:5173` で起動します。
 
-## Building for Production
+### 型定義の自動生成
 
-Create a production build:
+このテンプレートでは `.react-router` ディレクトリ配下の型ファイルが自動生成されます。
+CI環境等で型チェックを行う場合は、以下のコマンドを事前に実行してください。
 
 ```bash
-npm run build
+yarn react-router typegen
 ```
 
-## Deployment
+または、型チェックと同時に生成する場合は:
 
-### Docker Deployment
+```bash
+yarn type-check
+```
 
-To build and run using Docker:
+## 本番ビルド
+
+```bash
+yarn build
+```
+
+## デプロイ
+
+### Docker を使う場合
 
 ```bash
 docker build -t my-app .
-
-# Run the container
 docker run -p 3000:3000 my-app
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+### Node アプリとしてデプロイする場合
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+`yarn build` で生成される `build/` ディレクトリをデプロイ対象にしてください。
 
 ```
 ├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── yarn.lock
 ├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+│   ├── client/    # 静的アセット
+│   └── server/    # サーバーサイドコード
 ```
 
-## Styling
+## スタイリング
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+[Tailwind CSS](https://tailwindcss.com/) が初期設定済みです。お好みのCSSフレームワークに差し替えも可能です。
 
 ---
 
-Built with ❤️ using React Router.
+Built with ❤️ using React Router v7.

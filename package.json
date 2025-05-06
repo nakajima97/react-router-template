@@ -9,7 +9,8 @@
     "typecheck": "react-router typegen && tsc",
     "bc": "biome check --write .",
     "format": "biome format .",
-    "lint": "biome lint ."
+    "lint": "biome lint .",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@react-router/node": "^7.5.3",

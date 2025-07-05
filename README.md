@@ -52,13 +52,6 @@ yarn build
 
 ## デプロイ
 
-### Docker を使う場合
-
-```bash
-docker build -t my-app .
-docker run -p 3000:3000 my-app
-```
-
 ### Node アプリとしてデプロイする場合
 
 `yarn build` で生成される `build/` ディレクトリをデプロイ対象にしてください。
